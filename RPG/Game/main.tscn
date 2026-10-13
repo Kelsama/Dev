@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dku7wvio23ch0"]
+
+[ext_resource type="PackedScene" uid="uid://cs5a7xw4p8x0e" path="res://player.tscn" id="1_ig7tw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1wjb"]
+size = Vector2(100, 80)
+
+[node name="Main" type="Node2D" unique_id=214707744]
+
+[node name="Ground" type="Polygon2D" parent="." unique_id=1308436802]
+color = Color(0.39607844, 0.54901963, 0.34901962, 1)
+polygon = PackedVector2Array(-1000, -1000, 1000, -1000, 1000, 1000, -1000, 1000)
+
+[node name="Player" parent="." unique_id=1368304824 instance=ExtResource("1_ig7tw")]
+
+[node name="Rock" type="StaticBody2D" parent="." unique_id=528289928]
+position = Vector2(200, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock" unique_id=665972109]
+shape = SubResource("RectangleShape2D_l1wjb")
+
+[node name="Visual" type="Polygon2D" parent="Rock" unique_id=1593000268]
+color = Color(0.46666667, 0.46666667, 0.46666667, 1)
+polygon = PackedVector2Array(-50, -40, 50, -40, 50, 40, -50, 40)

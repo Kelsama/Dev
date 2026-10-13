@@ -1,0 +1,9 @@
+# Godot
+.godot/
+
+# .NET
+bin/
+obj/
+
+# Visual Studio
+.vs/
